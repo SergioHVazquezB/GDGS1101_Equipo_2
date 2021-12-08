@@ -412,6 +412,9 @@ h1, h2, h3, h4, h5, h6 {
   .header-social-links {
     padding: 0 48px 0 0;
   }
+  .logosplash{
+    font-size: medium;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -592,6 +595,9 @@ section {
     align-items: center;
     justify-content: flex-end;
   }
+  .logosplash{
+    font-size: medium;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -748,6 +754,9 @@ section {
 @media (min-width: 992px) {
   .testimonials .testimonial-item p {
     width: 80%;
+  }
+  .logosplash{
+    font-size: larger;
   }
 }
 
@@ -1292,4 +1301,44 @@ section {
 
 #footer .credits a {
   color: #34b7a7;
+}
+
+
+/*Splash Screen*/
+
+.intro{
+  position:fixed;
+  z-index: 1;
+  left:0;
+  top:0;
+  width:100%;
+  height: 100vh;
+  background-color:#161616;
+  transition:1s;
+}
+
+.logosplash-header{
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color: #ffffff;
+}
+
+.logosplash{
+  position:relative;
+  display:inline-block;
+  bottom:-20px;
+}
+
+.logosplash:active{
+  bottom: 0;
+  opacity:1;
+  transition:ease-in-out 0.5s;
+}
+
+.logosplash.fade{
+  bottom: 150px;
+  opacity:0;
+  transition:ease-in-out 0.5s;
 }

@@ -4,11 +4,41 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+let intro = document.querySelector('.intro');
+let logo = document.querySelector('.logosplash-header');
+let logoSpan = document.querySelectorAll('.logosplash');
+
 !(function($) {
   "use strict";
 
   // Preloader
   $(window).on('load', function() {
+
+    //SPLASH SCREEN
+    setTimeout(function()  {
+        
+      logoSpan.forEach((span, idx) => {
+          setTimeout(function() {
+              span.classList.add('active');
+          }, (idx + 1) * 400)
+      })
+
+      setTimeout(function() {
+          logoSpan.forEach((span, idx) => {
+              setTimeout(function() {
+                  span.classList.add('active');
+                  span.classList.add('fade');
+              }, (idx + 1) * 50)
+          })
+      },2000);
+
+      setTimeout(function()  {
+          intro.style.top = '-100vh';
+      }, 2300)
+
+  })
+
     if ($('#preloader').length) {
       $('#preloader').delay(100).fadeOut('slow', function() {
         $(this).remove();
